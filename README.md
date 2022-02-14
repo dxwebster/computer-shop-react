@@ -1,4 +1,4 @@
-<h1 align=center> Beleza na Web</h1>
+<h1 align=center> Computer Shop</h1>
 
 <p align=center> Aplicação de carrinho de e-commerce com consumo de API e steps de pagamento e sucesso
 
@@ -93,7 +93,7 @@
 - Visualização de dados de cartão de crédito mascarados
 ## 📥 Execute esse projeto no seu computador
 
-- Clonar Repositório: `git clone https://github.com/dxwebster/test-front`
+- Clonar Repositório: `git clone https://github.com/dxwebster/computer-shop-react`
 - Instalar dependências: `yarn`
 - Criar aquivo .env com as seguintes variáveis:
 ```

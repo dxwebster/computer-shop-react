@@ -1,1 +1,1 @@
-export const API_URL_CART = '9c305a66-16e0-4bd2-bec0-f4839d3709af';
+export const API_URL_CART = '2756bcf4-0cb3-4009-aeea-0cac0ed0fdfe';
