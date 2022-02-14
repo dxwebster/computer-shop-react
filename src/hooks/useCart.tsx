@@ -188,7 +188,7 @@ export function CartProvider({ children }: CartProviderProps): JSX.Element {
       addToast({
         type: 'error',
         title: 'Erro',
-        description: 'Erro na remoção de item'
+        description: 'Erro ao tentar remover item'
       });
     }
   };
