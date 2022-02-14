@@ -158,12 +158,14 @@ export function CartProvider({ children }: CartProviderProps): JSX.Element {
 
         setCartItems(updatedCartItems);
         setSumInfoItems(updatedCartItems);
-      } else throw Error();
+      }
+      //
+      else throw Error();
     } catch {
       addToast({
         type: 'error',
         title: 'Erro',
-        description: 'Erro ao alterar quantidade'
+        description: 'Erro ao tentar alterar quantidade'
       });
     }
   };
