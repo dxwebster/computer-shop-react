@@ -8,7 +8,10 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "yarn build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "cypress:open": "cypress open",
+    "cypress:ci": "cypress run",
+    "cypress:smoke-test": "cypress run --spec cypress/integration/smoke-test.spec.js"
   },
   "homepage": "https://dxwebster.github.io/computer-shop-react",
   "browserslist": {
