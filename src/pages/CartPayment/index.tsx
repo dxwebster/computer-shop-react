@@ -19,7 +19,7 @@ import {
   TITULAR_NAME_PLACEHOLDER
 } from '../../constants/placeholder';
 
-import Button from '../../components/Button';
+import ButtonProgressive from '../../components/ButtonProgressive';
 import Input from '../../components/Input';
 import SumInfo from '../../components/SumInfo';
 import { useCart } from '../../hooks/useCart';
@@ -211,11 +211,10 @@ export default function CartPayment() {
             </FormContent>
           </div>
           <SumInfo />
-          <Button
+          <ButtonProgressive
             type="submit"
             title="Finalizar Pagamento"
             navigation="/cart/confirmation"
-            typeButton="payment"
             isValid={isValid}
           />
         </Content>

@@ -12,7 +12,6 @@ import formatCurrency from '../../helpers/formatCurrency';
 import cartMapper from '../../mappers/cart-mapper';
 import { setToLocalStorage } from '../../helpers/local-storage';
 import { BELEZA_NA_WEB_ALL_ITEMS } from '../../constants/local-storage';
-import { useLocation } from 'react-router';
 import { API_URL_CART } from '../../constants/api-url';
 
 interface CartItemsQuantity {

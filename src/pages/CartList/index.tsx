@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Button from '../../components/Button';
+import ButtonNavigation from '../../components/ButtonNavigation';
 import SumInfo from '../../components/SumInfo';
 import ItemsList from '../../components/ItemsList';
 import EmptyMessage from '../../components/EmptyMessage';
@@ -17,7 +17,7 @@ export default function CartList() {
         <Content>
           <ItemsList showControlers={true} />
           <SumInfo />
-          <Button title="Seguir para o pagamento" navigation="/cart/payment" />
+          <ButtonNavigation title="Seguir para o pagamento" navigation="/cart/payment" />
         </Content>
       ) : (
         <EmptyMessage />

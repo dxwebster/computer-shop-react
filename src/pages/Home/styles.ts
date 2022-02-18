@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { ButtonStyle } from '../../components/Button/styles';
+import { ButtonStyle } from '../../components/ButtonNavigation/styles';
 
 export const Container = styled.section`
   width: 100%;

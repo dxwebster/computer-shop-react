@@ -1,12 +1,13 @@
 import React from 'react';
 import { render } from 'react-dom';
 import App from './App';
+import { BrowserRouter } from 'react-router-dom';
 
 const rootElement = document.getElementById('root');
 
 render(
-  <React.StrictMode>
+  <BrowserRouter basename={process.env.PUBLIC_URL}>
     <App />
-  </React.StrictMode>,
+  </BrowserRouter>,
   rootElement
 );
