@@ -20,7 +20,7 @@
 
 ## 🛠 Tecnologias utilizadas
 
-- react: `Framework Javascript baseado em componentes`
+- react: `Biblioteca Javascript baseado em componentes`
 
 - typescript: `Linguagem de programação com tipagem estática`
 
