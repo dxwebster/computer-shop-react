@@ -6,7 +6,7 @@
     "start": "export ENVIRONMENT=${ENVIRONMENT:=development} NODE_ENV=development && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --verbose",
-    "test:c": "react-scripts test --coverage",
+    "test:coverage": "react-scripts test --coverage",
     "eject": "react-scripts eject",
     "predeploy": "yarn build",
     "deploy": "gh-pages -d build"
