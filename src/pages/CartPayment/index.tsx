@@ -19,7 +19,7 @@ import {
   TITULAR_NAME_PLACEHOLDER
 } from '../../constants/placeholder';
 
-import ButtonProgressive from '../../components/ButtonProgressive';
+import Button from '../../components/Button';
 import Input from '../../components/Input';
 import SumInfo from '../../components/SumInfo';
 import { useCart } from '../../hooks/useCart';
@@ -27,12 +27,11 @@ import { useCart } from '../../hooks/useCart';
 import { Container, FormContent, FormGroup, Content, InputsContent, CartContent } from './styles';
 
 export default function CartPayment() {
-  const formRef = useRef<FormHandles>(null);
   const { creditCardInfo, setCreditCardInfo, cartItems } = useCart();
+  const [isProgressive, setIsProgressive] = useState(false);
 
   const navigate = useNavigate();
-
-  const [isValid, setIsValid] = useState(false);
+  const formRef = useRef<FormHandles>(null);
 
   useEffect(() => {
     if (cartItems?.length === 0) navigate('/', { replace: true });
@@ -66,7 +65,6 @@ export default function CartPayment() {
 
       await schema.validate(data, { abortEarly: false });
 
-      setIsValid(true);
       return true;
     } catch (err) {
       if (err instanceof Yup.ValidationError) {
@@ -129,6 +127,9 @@ export default function CartPayment() {
       };
 
       setToLocalStorage(BELEZA_NA_WEB_CREDIT_CARD, maskData);
+
+      setIsProgressive(true);
+      setTimeout(() => navigate('/cart/confirmation', { replace: true }), 5000);
     }
   }, []);
 
@@ -211,12 +212,9 @@ export default function CartPayment() {
             </FormContent>
           </div>
           <SumInfo />
-          <ButtonProgressive
-            type="submit"
-            title="Finalizar Pagamento"
-            navigation="/cart/confirmation"
-            isValid={isValid}
-          />
+          <Button type="submit" isProgressive={isProgressive}>
+            Finalizar Pagamento
+          </Button>
         </Content>
       </Form>
     </Container>

@@ -6,12 +6,10 @@
     "start": "export ENVIRONMENT=${ENVIRONMENT:=development} NODE_ENV=development && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --verbose",
+    "test:c": "react-scripts test --coverage",
     "eject": "react-scripts eject",
     "predeploy": "yarn build",
-    "deploy": "gh-pages -d build",
-    "cypress:open": "cypress open",
-    "cypress:ci": "cypress run",
-    "cypress:smoke-test": "cypress run --spec cypress/integration/smoke-test.spec.js"
+    "deploy": "gh-pages -d build"
   },
   "homepage": "https://dxwebster.github.io/computer-shop-react",
   "browserslist": {

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { ButtonStyle } from '../../components/ButtonNavigation/styles';
 
 export const Container = styled.section`
   width: 100%;
@@ -57,30 +56,6 @@ export const ProductList = styled.ul`
       font-size: 2rem;
       font-weight: bold;
       margin: 1rem 0 1rem;
-    }
-  }
-`;
-
-export const Button = styled(ButtonStyle)`
-  gap: 2rem;
-  width: 70%;
-
-  @media (min-width: 40rem) {
-    justify-content: center;
-    width: 100%;
-    padding: 2rem 2rem;
-    font-size: 1.2rem;
-  }
-
-  .quantity {
-    display: flex;
-    align-items: center;
-    padding: 1rem 2rem;
-    border-right: 1px solid rgba(0, 0, 0, 0.1);
-    gap: 1rem;
-
-    @media (min-width: 36rem) {
-      margin-left: -2rem;
     }
   }
 `;

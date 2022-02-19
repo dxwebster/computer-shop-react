@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { MdShoppingBasket } from 'react-icons/md';
 
-import { ProductList, Button, StockCounter } from './styles';
+import { ProductList, StockCounter } from './styles';
 import api from '../../services/api';
 
 import { useCart } from '../../hooks/useCart';
 import { Cart, CartItem } from '../../interfaces/Cart';
 import Header from './components/Header';
 import Loading from '../../components/Loading';
+import Button from '../../components/Button';
 import formatCurrency from '../../helpers/formatCurrency';
 import cartMapper from '../../mappers/cart-mapper';
 import { setToLocalStorage } from '../../helpers/local-storage';
@@ -60,12 +61,15 @@ export default function Home() {
             <p>{item.product.name}</p>
             <span>{formatCurrency(item.product.priceSpecification.price)}</span>
 
-            <Button onClick={() => addProduct(item.product.sku)} data-testid="add-item-button">
-              <div className="quantity" data-testid="cart-item-quantity">
+            <Button
+              onClick={() => addProduct(item.product.sku)}
+              data-testid="add-item-button"
+              isProgressive={false}
+            >
+              <div className="icon" data-testid="cart-item-quantity">
                 <MdShoppingBasket size={20} color="#fff" />
                 {cartItemsQuantity[item.product.sku] || 0}
               </div>
-
               <span>ADICIONAR AO CARRINHO</span>
             </Button>
 

@@ -1,42 +1,7 @@
 import styled from 'styled-components';
+import { ButtonDefault } from '../../styles/global';
 
-interface ButtonProps {
-  width?: string;
-  type?: string;
-}
-
-export const ButtonStyle = styled.button<ButtonProps>`
-  width: ${(props) => props.width};
-  height: 5rem;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  background-color: ${(props) => props.theme.primary};
-  border-color: ${(props) => props.theme.primary};
-
-  padding: 1.8rem 0.94rem;
-  border-radius: 0.3rem;
-
-  font-size: 1.4rem;
-  font-weight: bold;
-  line-height: 2.4rem;
-  letter-spacing: 0.05rem;
-  text-transform: uppercase;
-
-  color: ${(props) => props.theme.white};
-  box-shadow: 0 0.3rem 0 0 ${(props) => props.theme.primaryDark};
-  cursor: pointer;
-
-  :hover {
-    background-color: ${(props) => props.theme.primaryDark};
-  }
-
-  @media (min-width: 48rem) {
-    grid-area: button;
-  }
-
+export const Container = styled(ButtonDefault)`
   &.progress-btn {
     position: relative;
     display: inline-block;
@@ -47,7 +12,7 @@ export const ButtonStyle = styled.button<ButtonProps>`
     cursor: pointer;
   }
 
-  &.progress-btn .btn {
+  &.progress-btn span {
     position: absolute;
     left: 0;
     top: 0;
