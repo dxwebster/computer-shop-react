@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/computer-shop-react/static/css/main.db023526.css",
+    "main.js": "/computer-shop-react/static/js/main.ce966cd0.js",
+    "static/media/shopping-cart.png": "/computer-shop-react/static/media/shopping-cart.f4de5f5bb7b4d0505b92.png",
+    "index.html": "/computer-shop-react/index.html",
+    "main.db023526.css.map": "/computer-shop-react/static/css/main.db023526.css.map",
+    "main.ce966cd0.js.map": "/computer-shop-react/static/js/main.ce966cd0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.db023526.css",
+    "static/js/main.ce966cd0.js"
+  ]
+}
